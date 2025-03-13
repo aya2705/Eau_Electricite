@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 11, 2025 at 12:58 AM
+-- Generation Time: Mar 13, 2025 at 01:07 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -50,7 +50,7 @@ CREATE TABLE `factures` (
   `consommation_kwh` float DEFAULT NULL,
   `montant_total` float DEFAULT NULL,
   `photo` varchar(100) DEFAULT NULL,
-  `status_paiement` varchar(50) DEFAULT NULL,
+  `status_paiement` enum('Payée','nonPayée','','') DEFAULT NULL,
   `tarif_id` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
